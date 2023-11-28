@@ -3,25 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAKTAB: MASJID E ABUBAKR SIDDIQUE R.A.</title>
+    <title>MAKTAB - Result Viewer</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 20px;
+            background-color: #f2f2f2;
+        }
+
+        h1 {
+            color: #4CAF50; /* Green color */
+        }
+
+        h2 {
+            color: #8B4513; /* Brown color for subheading */
         }
 
         #pdf-container {
             width: 100%;
             height: 500px;
+            background-color: #fff; /* White background for PDF container */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle box shadow */
+            margin-top: 20px;
+            padding: 20px;
+        }
+
+        label {
+            color: #333; /* Dark gray color for labels */
+            margin-right: 10px;
+        }
+
+        input {
+            padding: 8px;
+            margin-right: 10px;
+        }
+
+        button {
+            background-color: #4CAF50; /* Green button */
+            color: #fff; /* White text on the button */
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <h1>MAKTAB: MASJID E ABUBAKR SIDDIQUE R.A.</h1>
-    <label for="pdfName">Roll Number:</label>
-    <input type="text" id="pdfName" placeholder="Talib ka hajri number">
-    <button onclick="loadPDF()">Shashmahi Result</button>
+    <h1>MAKTAB</h1>
+    <h2>Result Viewer</h2>
+    <label for="pdfName">Enter PDF Name:</label>
+    <input type="text" id="pdfName" placeholder="Enter PDF name">
+    <button onclick="loadPDF()">Load PDF</button>
     <div id="pdf-container"></div>
 
     <script>
