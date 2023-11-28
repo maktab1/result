@@ -61,10 +61,17 @@
     <h3><B>Masjid E Abubakr Siddique r.a.</B></h3>
     <h2>RESULT</h2>
     <h4>(1st Term - Shashmahi Result) </h4>
-    <label for="pdfName">Roll Number:</label>
-    <input type="text" id="pdfName" placeholder="Talib ka Hajri Number">
-    <button onclick="loadPDF()">Result Dekhen!</button>
-    <div id="pdf-container"></div>
+
+    <form id="pdfForm">
+        <label for="pdfName">Enter PDF File Name:</label>
+        <input type="text" id="pdfName" name="pdfName" list="pdfSuggestions" placeholder="Talib ka Hajri Number" autocomplete="off" required>
+        <datalist id="pdfSuggestions"></datalist>
+        <button type="button" onclick="loadPDF()">Result Dekhen!</button>
+    </form>
+
+    <div id="pdf-container">
+        <!-- PDF content will be displayed here -->
+    </div>
 
     <script>
 
