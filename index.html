@@ -67,6 +67,22 @@
     <div id="pdf-container"></div>
 
     <script>
+
+        var pdfNames = [
+            "ZAINAB_SHAKIL_SAYYED.pdf",
+            "MEHREEN SAMEER SAYYED.pdf",
+            "test.pdf",
+            // Add more PDF file names as needed
+        ];
+
+        // Populate the datalist with suggestions
+        var pdfSuggestionsList = document.getElementById('pdfSuggestions');
+        pdfNames.forEach(function(pdfName) {
+            var option = document.createElement('option');
+            option.value = pdfName;
+            pdfSuggestionsList.appendChild(option);
+        });
+        
         function loadPDF() {
             const pdfName = document.getElementById('pdfName').value;
             const pdfContainer = document.getElementById('pdf-container');
