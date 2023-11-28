@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #pdf-container {
+            width: 100%;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+    <h1>PDF Viewer</h1>
+    <label for="pdfName">Enter PDF Name:</label>
+    <input type="text" id="pdfName" placeholder="Enter PDF name">
+    <button onclick="loadPDF()">Load PDF</button>
+    <div id="pdf-container"></div>
+
+    <script>
+        function loadPDF() {
+            const pdfName = document.getElementById('pdfName').value;
+            const pdfContainer = document.getElementById('pdf-container');
+
+            // Replace 'YOUR_GITHUB_REPO' with your GitHub repository name
+            const pdfUrl = `https://raw.githubusercontent.com/maktab1/result/main/${encodeURIComponent(pdfName)}.pdf`;
+
+            pdfContainer.innerHTML = `<iframe src="${pdfUrl}" width="100%" height="100%"></iframe>`;
+        }
+    </script>
+</body>
+</html>
+
