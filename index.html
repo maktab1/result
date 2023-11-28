@@ -71,6 +71,12 @@
             const pdfName = document.getElementById('pdfName').value;
             const pdfContainer = document.getElementById('pdf-container');
 
+            // Check if a PDF name is provided
+            if (pdfName.trim() === "") {
+                alert("Talib ka Naam type kijiye!");
+                return;
+            }
+
             // Replace 'YOUR_GITHUB_REPO' with your GitHub repository name
             const pdfUrl = `https://raw.githubusercontent.com/maktab1/result/main/${encodeURIComponent(pdfName)}.pdf`;
 
